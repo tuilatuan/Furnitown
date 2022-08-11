@@ -1,0 +1,82 @@
+// css header
+.header {
+  z-index: 1;
+  position: absolute;
+  .nav {
+    margin-top: 45px;
+    margin-left: 43px;
+    a {
+      font-size: 11px;
+      font-family: ab;
+      color: $black-cl;
+      text-transform: uppercase;
+      line-height: 30px;
+    }
+    a:nth-child(2) {
+      margin-left: 25px;
+      margin-right: 16px;
+    }
+    i {
+      img {
+        width: 22px;
+      }
+    }
+  }
+
+  &__hiden {
+    display: none;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    background: $bglogo-cl;
+    height: 110px;
+    &-left {
+      @include mid(1);
+      height: 100%;
+      .line {
+        width: 40px;
+        height: 100%;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &::before,
+        &::after {
+          content: "";
+          height: 3px;
+          width: 100%;
+          background: $white-cl;
+          display: block;
+        }
+        span {
+          height: 3px;
+          width: 100%;
+          background: $white-cl;
+          display: block;
+          margin: 5px 0;
+        }
+      }
+      .text {
+        font-size: 18px;
+        line-height: 43px;
+        letter-spacing: 0.05em;
+        color: $white-cl;
+        font-family: ab;
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include xs {
+    position: relative;
+    .nav {
+      display: none;
+    }
+    &__hiden {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,480 @@
+// CSS HOMEPAGE
+// Ví dụ
+.schero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &__slider {
+    height: 100%;
+    width: 100vw;
+    &-item {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .img {
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include mid();
+      }
+      @include xs {
+        height: auto;
+        .img {
+          position: relative;
+          width: auto;
+          height: auto;
+          transform: none;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include mid(1);
+      flex-direction: column;
+      height: 100%;
+      .title {
+        font-size: 80px;
+        font-family: e;
+        color: $white-cl;
+        line-height: 20px;
+        text-transform: uppercase;
+        @include mid(1);
+        flex-direction: column;
+        margin-top: 35px;
+        &::after {
+          content: "";
+          width: 771px;
+          height: 1px;
+          display: block;
+          background: $white-cl;
+          margin-top: 50px;
+        }
+      }
+      .text {
+        font-size: 12px;
+        line-height: 26px;
+        letter-spacing: -0.025em;
+        color: $white-cl;
+        font-family: ab;
+        text-transform: uppercase;
+        margin-top: 21px;
+      }
+      .btn {
+        padding: 13px 25px;
+        background: $black-btn;
+        border-radius: 4px;
+        font-family: ab;
+        font-size: 11px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $white-cl;
+        margin-top: 50px;
+        cursor: pointer;
+        &:hover {
+          background: $black-cl;
+        }
+      }
+      @include xs {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 35px;
+        height: auto;
+        .title {
+          font-size: 65.84px;
+          line-height: 16.46px;
+          color: $black-cl;
+          margin-bottom: 0;
+          &::after {
+            max-width: 525px;
+            background: $black-cl;
+            margin-top: 42px;
+          }
+        }
+        .text {
+          font-size: 18px;
+          line-height: 37.13px;
+          letter-spacing: -0.013em;
+          color: $black-cl;
+          text-align: center;
+          max-width: 425px;
+          margin-top: 12px;
+        }
+        .btn {
+          padding: 13px 50px;
+        }
+      }
+    }
+    @include xs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__bottom {
+    @include mid(1);
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    .logoline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      .line {
+        height: 100px;
+        width: 1px;
+        background: $black-btn;
+        display: block;
+        margin-bottom: 10px;
+        animation: line;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.83, 0.57, 0.15, 0.51);
+        animation-direction: alternate;
+      }
+    }
+    .text {
+      font-size: 11px;
+      font-family: ar;
+      text-transform: uppercase;
+      color: $black-cl;
+      line-height: 20px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-85%);
+  }
+  &__menu {
+    height: 100%;
+    width: 450px;
+    padding: 45px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: $bgmenu-cl;
+    color: $white-cl;
+    flex-direction: column;
+    text-transform: uppercase;
+    &.active {
+      z-index: 5;
+      display: flex;
+    }
+    &-contacttop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+      .name {
+        font-family: ab;
+        font-size: 11px;
+        line-height: 20px;
+        color: $white-cl;
+      }
+    }
+    &-option {
+      display: flex;
+      flex-direction: row;
+
+      // align-items: center;
+      .exit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a {
+          padding: 10px;
+          border-bottom: 1px solid $white-cl;
+          img {
+            max-width: 40px;
+          }
+        }
+        .line {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 15px;
+          cursor: pointer;
+          .rot {
+            width: 100%;
+            height: 1px;
+            background: $white-cl;
+            &.spana {
+              transform: rotate(45deg);
+            }
+            &.spanb {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        flex-grow: 1;
+        .item {
+          position: relative;
+          font-size: 25px;
+          font-family: e;
+          line-height: 40px;
+          padding: 21px 0px 5px 20px;
+          color: $white-cl;
+          letter-spacing: 0.1em;
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background: $white-cl;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 67px;
+            // @include transform(scaleX(0));
+            @include transition($t);
+            transition-timing-function: ease-out;
+          }
+          &:hover {
+            &::after {
+              overflow: hidden;
+              width: 100%;
+              // @include transform(scaleX(1));
+              @include transition($t);
+              transition-timing-function: ease-out;
+            }
+          }
+        }
+        .faq {
+          margin-top: 40px;
+          padding-left: 20px;
+          display: flex;
+          .item1 {
+            color: $white-cl;
+            text-decoration: none;
+            padding-right: 10px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 0;
+              height: 1px;
+              background: $white-cl;
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 21px;
+              @include transform(scaleX(0));
+              @include transition($t);
+              transition-timing-function: ease-out;
+            }
+            &:hover {
+              &::before {
+                overflow: hidden;
+                width: 85%;
+                @include transform(scaleX(1));
+                @include transition($t);
+                transition-timing-function: ease-out;
+              }
+            }
+            &:first-child::after {
+              content: "";
+              width: 2px;
+              height: 13px;
+              display: block;
+              position: absolute;
+              background: $white-cl;
+              top: 7px;
+              left: 44px;
+            }
+          }
+        }
+      }
+    }
+    @include xs {
+      height: 100vh;
+      width: 100%;
+      &-contacttop {
+        display: none;
+      }
+      &-option {
+        .exit {
+          display: none;
+        }
+        .list {
+          margin-left: 0;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+    background: rgba($color: $bg-overlay, $alpha: $overlay);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    &.active {
+      display: block;
+    }
+    @include xs {
+      display: none;
+    }
+  }
+  @include xs {
+    height: auto;
+    &__btn,
+    &__bottom {
+      display: none;
+    }
+  }
+}
+.room {
+  padding-top: 160px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .text {
+      font-family: ar;
+      font-size: 12px;
+      line-height: 40px;
+      color: $black-cl;
+      max-width: 400px;
+      .blod {
+        font-family: ab;
+      }
+    }
+    &-img {
+      .thumnail {
+        padding-top: 58.86%;
+        .overlay {
+          background: rgba($color: $bglogo-cl, $alpha: $overlay);
+        }
+      }
+    }
+  }
+  &__right {
+    .thumnail {
+      padding-top: 102.72%;
+      .overlay {
+        background: rgba($color: $bg-overlay, $alpha: $overlay);
+      }
+    }
+  }
+  @include xs {
+    padding-top: 0;
+    .container {
+      grid-template-columns: 1fr;
+    }
+    &__left {
+      .text {
+        display: none;
+      }
+    }
+  }
+}
+.kitchenroom {
+  margin-top: var(--mtop);
+  .thumnail {
+    padding-top: 35.54%;
+  }
+}
+.bedbathroom {
+  margin-top: var(--mtop);
+  margin-bottom: 100px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  &__left {
+    .thumnail {
+      padding-top: 112%;
+      .overlay {
+        background: rgba($color: $bg-overlay, $alpha: $overlay);
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .thumnail {
+      padding-top: 71%;
+      .overlay {
+        background: rgba($color: $bglogo-cl, $alpha: $overlay);
+      }
+    }
+    &-content {
+      position: relative;
+      .text {
+        position: relative;
+        max-width: 431px;
+        float: right;
+        text-align: right;
+        z-index: 1;
+        font-size: 18px;
+        line-height: 40px;
+        font-family: ei;
+        color: $white-cl;
+        .blod {
+          color: #caa348;
+        }
+      }
+      .pen {
+        position: absolute;
+        z-index: 0;
+        bottom: -40px;
+        right: -60px;
+      }
+    }
+  }
+  @include xs {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    &__right {
+      &-content {
+        .text {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        .pen {
+          position: relative;
+          margin: 0 auto;
+          display: block;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
