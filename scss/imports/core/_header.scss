@@ -25,14 +25,14 @@
 
   &__hiden {
     display: none;
+    background: $bglogo-cl;
+    height: 110px;
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 100%;
     }
-    background: $bglogo-cl;
-    height: 110px;
     &-left {
       @include mid(1);
       height: 100%;
@@ -51,6 +51,7 @@
           width: 100%;
           background: $white-cl;
           display: block;
+          @include transition($tr);
         }
         span {
           height: 3px;
@@ -58,6 +59,19 @@
           background: $white-cl;
           display: block;
           margin: 5px 0;
+        }
+        &.active {
+          span {
+            display: none;
+          }
+          &::before {
+            @include transform(rotate(135deg));
+            @include transition($tr);
+          }
+          &::after {
+            @include transform(translateY(-2px) rotate(-135deg));
+            @include transition($tr);
+          }
         }
       }
       .text {
@@ -68,6 +82,9 @@
         font-family: ab;
         text-transform: uppercase;
       }
+    }
+    @include xs {
+      height: 90px;
     }
   }
   @include xs {

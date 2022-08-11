@@ -22,7 +22,7 @@ function srolltoProduct() {
   });
 }
 srolltoProduct();
-function showMenu() {
+function showmenuDesktop() {
   let btnShowmenu = document.querySelector(".menulogo .btnmenu ");
   let Schero = document.querySelector(".schero .schero__menu");
   let btnExitmenu = document.querySelector(".exit .line ");
@@ -57,4 +57,21 @@ function showMenu() {
     overlay.classList.remove("active");
   }
 }
-showMenu();
+showmenuDesktop();
+function showmenuMobile() {
+  let btnShowmobile = document.querySelector(".header__hiden .line ");
+  Schero = document.querySelector(".schero .schero__menu");
+
+  btnShowmobile.addEventListener("click", function () {
+    btnShowmobile.classList.toggle("active");
+    Schero.classList.toggle("active");
+    gsap.fromTo(
+      Schero,
+      {
+        y: -300,
+      },
+      { y: 0 }
+    );
+  });
+}
+showmenuMobile();
