@@ -1,5 +1,12 @@
 // css header
 .header {
+  &.headerproduct {
+    .nav {
+      a {
+        color: $white-cl;
+      }
+    }
+  }
   z-index: 1;
   position: absolute;
   .nav {
