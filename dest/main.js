@@ -12,8 +12,8 @@ function backTotop() {
 }
 backTotop();
 function srolltoProduct() {
-  let schero = document.querySelector(" .schero");
-  let btnshowProduct = document.querySelector(".schero__bottom .logoline");
+  let schero = document.querySelector(".schero");
+  let btnshowProduct = document.querySelector(" .logoline");
   btnshowProduct.addEventListener("click", function () {
     window.scrollTo({
       top: schero.clientHeight,
@@ -24,9 +24,9 @@ function srolltoProduct() {
 srolltoProduct();
 function showmenuDesktop() {
   let btnShowmenu = document.querySelector(".menulogo .btnmenu ");
-  let Schero = document.querySelector(".schero .schero__menu");
+  let Schero = document.querySelector(".menuhiden .menuhiden__menu");
   let btnExitmenu = document.querySelector(".exit .line ");
-  let overlay = document.querySelector(".schero .overlay");
+  let overlay = document.querySelector(".menuhiden .overlay");
 
   btnShowmenu.addEventListener("click", function () {
     Schero.classList.add("active");
@@ -45,6 +45,9 @@ function showmenuDesktop() {
   overlay.addEventListener("click", function () {
     removeActive();
   });
+  window.addEventListener("scroll", function () {
+    removeActive();
+  });
   function removeActive() {
     gsap.fromTo(
       Schero,
@@ -60,7 +63,7 @@ function showmenuDesktop() {
 showmenuDesktop();
 function showmenuMobile() {
   let btnShowmobile = document.querySelector(".header__hiden .line ");
-  Schero = document.querySelector(".schero .schero__menu");
+  Schero = document.querySelector(".menuhiden .menuhiden__menu");
 
   btnShowmobile.addEventListener("click", function () {
     btnShowmobile.classList.toggle("active");
@@ -75,3 +78,8 @@ function showmenuMobile() {
   });
 }
 showmenuMobile();
+function arrowdown() {
+  let arrow = document.querySelector(".seeplus .img");
+  console.log(1);
+}
+arrowdown();

@@ -49,6 +49,7 @@
   }
 }
 .roomproduct {
+  padding-top: 50px;
   &__list {
     padding-left: 15px;
     padding-right: 15px;
@@ -133,7 +134,7 @@
         align-items: center;
         gap: 25px;
         padding-bottom: 50px;
-        border-bottom: 1px solid #acacac;
+
         .productitem {
           .img {
             height: 0;
@@ -168,6 +169,11 @@
               font-family: ar;
               color: $black-cl;
               letter-spacing: -0.025em;
+              @include transition($t);
+              &:hover {
+                color: $yel-cl-sp;
+                @include transition($t);
+              }
             }
             .price {
               font-size: 12px;
@@ -196,9 +202,27 @@
           position: absolute;
           right: 0;
           bottom: 50px;
-          img {
-            width: 13px;
+          cursor: pointer;
+          a {
+            height: 17px;
+            margin-left: 5px;
+            @include transform(scale(1));
+            @include transition($t);
+            img {
+              width: 13px;
+            }
           }
+          &:hover {
+            a {
+              @include transform(scale(1.5));
+              @include transition($t);
+            }
+          }
+        }
+      }
+      &:not(:last-child) {
+        .productlist {
+          border-bottom: 1px solid #acacac;
         }
       }
     }

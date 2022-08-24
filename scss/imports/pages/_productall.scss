@@ -1,0 +1,32 @@
+.productall {
+  background: url(../img/banner-productall.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.seeall {
+  padding-top: 50px;
+  .roomproduct__list-item {
+    .productlist {
+      row-gap: 50px;
+    }
+  }
+}
+.btnarrow {
+  .seeplus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .img {
+      width: 8px;
+    }
+    .text {
+      font-size: 11px;
+      line-height: 40px;
+      font-family: ar;
+      text-transform: uppercase;
+      color: #909090;
+    }
+  }
+}
