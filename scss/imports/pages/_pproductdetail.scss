@@ -1,0 +1,175 @@
+.detailtop {
+  border-bottom: 1px solid #bfbfbf;
+  .container {
+    max-width: 1200px;
+  }
+  &__top {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      .text {
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 30px;
+        font-family: ab;
+        margin-right: 16px;
+      }
+      .img {
+        width: 22px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.infordetail {
+  border-bottom: 1px solid #bfbfbf;
+  .container {
+    max-width: 1200px;
+  }
+  &__product {
+    display: flex;
+    flex-direction: row;
+
+    &-prdimg {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 69px;
+      .imgs {
+        .img {
+          img {
+            display: block;
+          }
+        }
+      }
+      .listbtn {
+        display: flex;
+        justify-content: space-between;
+
+        .nextprev {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 30px;
+          .btn {
+            padding: 27px;
+            background: #383a3e;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:first-child {
+              margin-right: 20px;
+            }
+            img {
+              width: 13px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include transform(translate(-50%, -50%) scale(1));
+              @include transition($t);
+            }
+            &:hover {
+              img {
+                @include transform(translate(-50%, -50%) scale(1.2));
+                @include transition($t);
+              }
+            }
+          }
+        }
+        .zoom {
+          background: $bglogo-cl;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 25px;
+          padding-right: 10px;
+          span {
+            font-family: ab;
+            font-size: 11px;
+            line-height: 60px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: $white-cl;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    &-content {
+      max-width: 300px;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-bottom: 40px;
+      border-left: 1px solid #bfbfbf;
+      .nameproduct {
+        font-size: 32px;
+        line-height: 40px;
+        font-family: ebr;
+        color: $black-cl;
+        max-width: 275px;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      .price {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        span,
+        .number {
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 54px;
+          font-family: ab;
+          color: #5b4816;
+          letter-spacing: 0.1em;
+        }
+        .number {
+          font-size: 16px;
+        }
+      }
+      .listinfor {
+        margin-bottom: 80px;
+        .item {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          font-size: 14px;
+          line-height: 54px;
+          font-family: ar;
+          letter-spacing: 0.1em;
+          color: $black-cl;
+          .letf,
+          .right::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+      .descri {
+        .ttitle {
+          font-size: 11px;
+          line-height: 20px;
+          font-family: ab;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        .text {
+          font-size: 12px;
+          line-height: 20px;
+          font-family: ar;
+          color: $black-cl;
+          max-width: 235px;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}

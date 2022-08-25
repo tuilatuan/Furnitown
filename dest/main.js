@@ -23,7 +23,7 @@ function srolltoProduct() {
 }
 srolltoProduct();
 function showmenuDesktop() {
-  let btnShowmenu = document.querySelector(".menulogo .btnmenu ");
+  let btnShowmenu = document.querySelector(".menulogo .btnmenu");
   let Schero = document.querySelector(".menuhiden .menuhiden__menu");
   let btnExitmenu = document.querySelector(".exit .line ");
   let overlay = document.querySelector(".menuhiden .overlay");
@@ -64,10 +64,11 @@ showmenuDesktop();
 function showmenuMobile() {
   let btnShowmobile = document.querySelector(".header__hiden .line ");
   Schero = document.querySelector(".menuhiden .menuhiden__menu");
-
+  let overlay = document.querySelector(".menuhiden .overlay");
   btnShowmobile.addEventListener("click", function () {
     btnShowmobile.classList.toggle("active");
     Schero.classList.toggle("active");
+    overlay.classList.toggle("active");
     gsap.fromTo(
       Schero,
       {

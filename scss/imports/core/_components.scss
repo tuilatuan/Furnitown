@@ -229,6 +229,9 @@ article {
       z-index: 5;
       display: flex;
       position: fixed;
+      @include xs {
+        top: 74px;
+      }
     }
     &-contacttop {
       display: flex;
@@ -396,7 +399,7 @@ article {
       display: block;
     }
     @include xs {
-      display: none;
+      z-index: 0;
     }
   }
 }

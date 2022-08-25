@@ -9,6 +9,9 @@
   .roomproduct__list-item {
     .productlist {
       row-gap: 50px;
+      @include xs {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 }
