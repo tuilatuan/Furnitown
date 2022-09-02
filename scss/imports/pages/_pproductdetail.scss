@@ -15,6 +15,12 @@
         line-height: 30px;
         font-family: ab;
         margin-right: 16px;
+        color: $black-cl;
+        @include transition($t);
+        &:hover {
+          color: $yel-cl-sp;
+          @include transition($t);
+        }
       }
       .img {
         width: 22px;
@@ -36,10 +42,19 @@
       padding-top: 50px;
       padding-bottom: 50px;
       padding-right: 69px;
+      display: flex;
+      flex-direction: column;
+      width: 800px;
       .imgs {
-        .img {
-          img {
-            display: block;
+        height: 540px;
+        overflow: hidden;
+        .item {
+          width: 100%;
+          height: 100%;
+
+          .img {
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -62,6 +77,7 @@
             justify-content: center;
             &:first-child {
               margin-right: 20px;
+              @include transform(rotate(180deg));
             }
             img {
               width: 13px;
@@ -164,10 +180,198 @@
           line-height: 20px;
           font-family: ar;
           color: $black-cl;
-          max-width: 235px;
+          max-width: 260px;
           &::first-letter {
             text-transform: capitalize;
           }
+        }
+      }
+    }
+  }
+}
+.productplus {
+  margin-top: 95px;
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__title {
+    font-size: 18px;
+    font-family: ebr;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: $black-cl;
+    margin: 0 auto;
+    width: max-content;
+    margin-bottom: 40px;
+  }
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #acacac;
+    &-item {
+      .img {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        flex: 1;
+        padding-bottom: 115.27%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%) scale(1));
+          @include transition($t);
+        }
+        &:hover {
+          img {
+            @include transform(translate(-50%, -50%) scale(1.1));
+            @include transition($t);
+          }
+        }
+      }
+      .infor {
+        display: flex;
+        flex-direction: column;
+        margin-top: 17px;
+        .nameproduct {
+          font-size: 18px;
+          line-height: 40px;
+          font-family: ar;
+          color: $black-cl;
+          letter-spacing: -0.025em;
+          @include transition($t);
+          &:hover {
+            color: $yel-cl-sp;
+            @include transition($t);
+          }
+        }
+        .price {
+          font-size: 12px;
+          line-height: 40px;
+          letter-spacing: 0.1em;
+          color: $black-cl;
+          font-family: ar;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+        .btndetail {
+          margin-top: 20px;
+          max-width: max-content;
+        }
+      }
+      .btnall {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+          content: "";
+          width: 0;
+          height: 1px;
+          display: block;
+          background: $black-cl;
+          position: absolute;
+          top: 20px;
+          @include transition($t);
+        }
+        &:hover {
+          &::after {
+            overflow: hidden;
+            width: 100%;
+            @include transition($t);
+          }
+        }
+
+        img {
+          max-width: 20px;
+        }
+        span {
+          font-size: 12px;
+          line-height: 20px;
+          font-family: ab;
+          color: $black-cl;
+          text-transform: uppercase;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  // &:not(:last-child) {
+  //   .productlist {
+  //   }
+  // }
+}
+.productcontact {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 70px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 510px;
+    text-align: center;
+    .h3 {
+      font-size: 14px;
+      line-height: 40px;
+      font-family: ebr;
+      text-transform: uppercase;
+      color: $black-cl;
+    }
+    .text {
+      font-size: 12px;
+      line-height: 20px;
+      font-family: ar;
+      color: $black-cl;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    &-btn {
+      width: 200px;
+      text-align: center;
+      border: 1px solid $black-cl;
+      color: $black-cl;
+      font-size: 11px;
+      line-height: 20px;
+      font-family: ab;
+      text-transform: uppercase;
+      padding: 5px 45px;
+      cursor: pointer;
+      @include transition($t);
+      &:hover {
+        background: $black-cl;
+        color: $white-cl;
+        @include transition($t);
+      }
+      &.order {
+        background: $black-cl;
+        color: $white-cl;
+        margin-right: 30px;
+        &:hover {
+          background: $white-cl;
+          color: $black-cl;
+          @include transition($t);
         }
       }
     }

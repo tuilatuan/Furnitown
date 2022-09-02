@@ -11,17 +11,7 @@ function backTotop() {
   }
 }
 backTotop();
-function srolltoProduct() {
-  let schero = document.querySelector(".schero");
-  let btnshowProduct = document.querySelector(" .logoline");
-  btnshowProduct.addEventListener("click", function () {
-    window.scrollTo({
-      top: schero.clientHeight,
-      behavior: "smooth",
-    });
-  });
-}
-srolltoProduct();
+
 function showmenuDesktop() {
   let btnShowmenu = document.querySelector(".menulogo .btnmenu");
   let Schero = document.querySelector(".menuhiden .menuhiden__menu");
@@ -79,8 +69,43 @@ function showmenuMobile() {
   });
 }
 showmenuMobile();
-function arrowdown() {
-  let arrow = document.querySelector(".seeplus .img");
-  console.log(1);
+
+// function slideproductdetail() {
+//   var elem = document.querySelector(".imgs");
+//   var flkty = new Flickity(".imgs", {
+//     cellAlign: "left",
+//     contain: true,
+//     wrapAround: true,
+//     prevNextButtons: false,
+//     fullscreen: true,
+//   });
+//   // var previousButton = document.querySelector(".btnprevnext .prev");
+//   // previousButton.addEventListener("click", function (e) {
+//   //   e.preventDefault();
+
+//   //   flkty.previous();
+//   // });
+//   // var nextButton = document.querySelector(".btnprevnext .next");
+//   // nextButton.addEventListener("click", function (e) {
+//   //   e.preventDefault();
+//   //   flkty.next();
+//   // });
+//   // var btnfullscreen = document.querySelector(".fulls");
+//   // btnfullscreen.addEventListener("click", function () {
+//   //   console.log(1);
+//   //   flkty.viewFullscreen();
+//   // });
+// }
+// slideproductdetail();
+
+function srolltoProduct() {
+  let schero = document.querySelector(".schero");
+  let btnshowProduct = document.querySelector(" .logoline");
+  btnshowProduct.addEventListener("click", function () {
+    window.scrollTo({
+      top: schero.clientHeight,
+      behavior: "smooth",
+    });
+  });
 }
-arrowdown();
+srolltoProduct();
