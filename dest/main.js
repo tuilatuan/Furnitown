@@ -12,6 +12,46 @@ function backTotop() {
 }
 backTotop();
 
+// function viewFull() {
+//   var flktyy = new Flickity(".imgs .item .img", {
+//     fullscreen: true,
+//   });
+
+//   var viewFullscreenButton = document.querySelector(".listbtn .zoom");
+//   viewFullscreenButton.addEventListener("click", function () {
+//     console.log(1);
+//     flktyy.viewFullscreen();
+//   });
+// }
+// viewFull();
+function slideProductdetail() {
+  var elem = document.querySelector(".imgs");
+  var flkty = new Flickity(".imgs", {
+    cellAlign: "left",
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: false,
+    fullscreen: true,
+  });
+  var previousButton = document.querySelector(".nextprev .prev");
+  previousButton.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    flkty.previous();
+  });
+  var nextButton = document.querySelector(".nextprev .next");
+  nextButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    flkty.next();
+  });
+  var btnfullscreen = document.querySelector(".listbtn .zoom");
+  btnfullscreen.addEventListener("click", function () {
+    console.log(1);
+    flkty.viewFullscreen();
+  });
+}
+slideProductdetail();
+
 function showmenuDesktop() {
   let btnShowmenu = document.querySelector(".menulogo .btnmenu");
   let Schero = document.querySelector(".menuhiden .menuhiden__menu");
@@ -69,34 +109,6 @@ function showmenuMobile() {
   });
 }
 showmenuMobile();
-
-// function slideproductdetail() {
-//   var elem = document.querySelector(".imgs");
-//   var flkty = new Flickity(".imgs", {
-//     cellAlign: "left",
-//     contain: true,
-//     wrapAround: true,
-//     prevNextButtons: false,
-//     fullscreen: true,
-//   });
-//   // var previousButton = document.querySelector(".btnprevnext .prev");
-//   // previousButton.addEventListener("click", function (e) {
-//   //   e.preventDefault();
-
-//   //   flkty.previous();
-//   // });
-//   // var nextButton = document.querySelector(".btnprevnext .next");
-//   // nextButton.addEventListener("click", function (e) {
-//   //   e.preventDefault();
-//   //   flkty.next();
-//   // });
-//   // var btnfullscreen = document.querySelector(".fulls");
-//   // btnfullscreen.addEventListener("click", function () {
-//   //   console.log(1);
-//   //   flkty.viewFullscreen();
-//   // });
-// }
-// slideproductdetail();
 
 function srolltoProduct() {
   let schero = document.querySelector(".schero");
