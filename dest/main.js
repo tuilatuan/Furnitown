@@ -53,7 +53,7 @@ function showmenuDesktop() {
 showmenuDesktop();
 function showmenuMobile() {
   let btnShowmobile = document.querySelector(".header__hiden .line ");
-  Schero = document.querySelector(".menuhiden .menuhiden__menu");
+  let Schero = document.querySelector(".menuhiden .menuhiden__menu");
   let overlay = document.querySelector(".menuhiden .overlay");
   btnShowmobile.addEventListener("click", function () {
     btnShowmobile.classList.toggle("active");
