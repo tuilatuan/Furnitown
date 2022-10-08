@@ -29,7 +29,7 @@
 
   <body class="contactpage">
     <!-- HEADER -->
-    <header class="header">
+    <header class="header headercontact">
       <nav class="nav">
         <a href="">furnitown</a>
         <a href="">share</a>
@@ -84,7 +84,7 @@
               <a href="./product.html" class="item">sản phẩm</a>
               <a href="" class="item">dịch vụ</a>
               <a href="project.html" class="item">dự án</a>
-              <a href="contact.html" class="item">liên hệ</a>
+              <a href="" class="item">liên hệ</a>
               <div class="faq">
                 <a href="" class="item1">faqs</a>
                 <a href="News.html" class="item1">tin tức</a>
@@ -94,54 +94,63 @@
         </div>
         <div class="overlay"></div>
       </div>
-      <section class="servicetop">
+      <section class="contact">
         <div class="container">
-          <h1 class="servicetop__title">dịch vụ chúng tôi</h1>
-          <div class="servicetop__img">
-            <a href="">
-              <img src="./img/img1-service.jpg" alt="" />
-            </a>
-          </div>
-          <div class="servicetop__consul">
-            <div class="servicetop__consul-left">
-              <h3 class="title">tư vấn thiết kế</h3>
+          <div class="contact__infor">
+            <div class="contact__infor-left">
+              <span class="titleinfor">liên hệ với chúng tôi</span>
               <p class="text">
-                Tư vấn về giá vật liệu theo nhu cầu khách hàng. Tư vấn mẫu mãu,
-                tư vấn thiết kế mẫu mã phù hợp và theo yêu cầu của khách hàng.
-                Soạn thảo hợp đồng. Nhận cọc và bắt đầu thực hiện theo hợp đồng.
-                Thiết kế, sản xuất thi công. Nghiệm thu.
-              </p>
-              <p class="textdemo">
-                Thiết kế và thi công theo yêu cầu : nhà ở , karaoke , bar , cà
-                phê, văn phòng
+                Chúng tôi luôn sẵn sàng để phục vụ bạn 24/24 tư vấn và cập nhật
+                thông tin sản phẩm một cách nhanh nhất và chuyên nghiệp nhất
               </p>
             </div>
-            <div class="servicetop__consul-right">
-              <div class="productcontact__btns">
-                <a href="" class="productcontact__btns-btn order"
-                  >liên hệ tư vấn</a
-                >
-                <a href="" class="productcontact__btns-btn advise"
-                  >xem sản phẩm</a
-                >
+            <div class="contact__infor-right">
+              <a href="tel:" class="hotline">
+                <span class="titleinfor">hotline</span>
+                <p class="numphone">0937.168.938</p>
+              </a>
+              <a href="mailto:noithatfunitown@gmail.com" class="mail">
+                <span class="titleinfor">email</span>
+                <p class="numphone">noithatfunitown@gmail.com</p>
+              </a>
+              <a href="#" class="address">
+                <span class="titleinfor">địa chỉ</span>
+                <p class="numphone">
+                  Số 7/22A, Ấp 6, xã Đông Thạnh, huyện Hóc Môn, thành phố Hồ Chí
+                  Minh
+                </p>
+              </a>
+            </div>
+          </div>
+          <form class="contact__form">
+            <p class="contact__form-title">
+              Bạn cần thông tin tư vấn, xin vui lòng nhập thông tin cá nhân tại
+              đây :
+            </p>
+            <div class="contact__form-list">
+              <div class="left">
+                <label class="text" for="name">tên khách hàng</label>
+                <input value="" type="text" name="name" id="name" />
+                <label class="text" for="email">email</label>
+                <input value="" type="text" name="email" id="email" />
+                <label class="text" for="Nphone">số điện thoại</label>
+                <input value="" type="text" name="Nphone" id="Nphone" />
+              </div>
+              <div class="right">
+                <label class="text" for="address">địa chỉ</label>
+                <input value="" type="text" name="address" id="address" />
+                <label class="text" for="note">ghi chú</label>
+                <textarea
+                  aria-valuetext=""
+                  name="note"
+                  id="note"
+                  cols="30"
+                  rows="5"
+                ></textarea>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="service">
-        <div class="container">
-          <h2 class="service__title">thi công dự án</h2>
-          <p class="service__textcontent">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            mollis tristique pellentesque. Praesent dapibus lectus neque, vel
-            convallis orci eleifend vel. Phasellus felis lectus, eleifend eget
-            quam eu, gravida sagittis urna. Sed nec nibh id nulla feugiat
-            sagittis. Maecenas hendrerit blandit pulvinar.
-          </p>
-          <div class="service__img">
-            <a href=""><img src="./img/img2-service.jpg" alt="" /></a>
-          </div>
+            <input class="btn" type="button" value="gửi" />
+          </form>
         </div>
       </section>
     </main>
@@ -175,6 +184,5 @@
 
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
-    <script type="text/javascript" src="js/optionproject.js"></script>
   </body>
 </html>

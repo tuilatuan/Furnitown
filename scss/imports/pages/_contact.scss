@@ -1,0 +1,158 @@
+.headercontact {
+  .nav {
+    a {
+      color: $white-cl;
+    }
+  }
+}
+.contact {
+  background: url(../img/imbackground-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 103px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #1a1a1a, $alpha: 0.7);
+    z-index: 0;
+  }
+  .container {
+    max-width: 830px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  &__infor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-top: 60px;
+    .titleinfor {
+      font-family: ab;
+      font-size: 12px;
+      line-height: 48.63px;
+      color: #ab9051;
+      text-transform: uppercase;
+    }
+    &-left {
+      .text {
+        font-size: 12px;
+        font-family: ar;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+        color: $white-cl;
+        max-width: 290px;
+      }
+    }
+    &-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      a {
+        p {
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: 0.1em;
+          color: $white-cl;
+          font-family: ar;
+        }
+      }
+      .address {
+        grid-area: 2/1/3/3;
+      }
+    }
+  }
+  &__form {
+    margin-top: 40px;
+    &-title {
+      font-family: ar;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: 0.1em;
+      color: $white-cl;
+      max-width: 310px;
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      .text {
+        font-size: 12px;
+        font-family: ar;
+        line-height: 53px;
+        letter-spacing: 0.1em;
+        color: $white-cl;
+        text-transform: capitalize;
+      }
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        input {
+          background: none;
+          border: none;
+          border-bottom: 1px #ab9051 solid;
+          outline: none;
+        }
+        textarea {
+          position: relative;
+          background: none;
+          border: none;
+          border-bottom: 1px #ab9051 solid;
+          outline: none;
+          resize: none;
+        }
+      }
+      .right {
+        .text:first-child {
+          position: relative;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #ab9051;
+            display: block;
+            position: absolute;
+            top: 150px;
+          }
+          &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #ab9051;
+            display: block;
+            position: absolute;
+            top: 186px;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    width: 86px;
+    background: $black-cl;
+    height: 36px;
+    color: #d4cebf;
+    font-family: ab;
+    font-size: 10px;
+    line-height: 7.05px;
+    text-transform: capitalize;
+    float: right;
+    border: 1px solid $white-cl;
+    margin-top: 30px;
+
+    @include transition($t);
+    &:hover {
+      background: #212121;
+      @include transition($t);
+    }
+  }
+}
